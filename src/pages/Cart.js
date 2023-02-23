@@ -22,8 +22,10 @@ export default function Cart() {
     getProducts()
       .then((res) => {
         const tempProduct = res?.data.filter((product) => product.id === id);
-        if (tempProduct.length) {
+        if (tempProduct.length > 0) {
           setProduct(tempProduct[0]);
+        } else {
+          navigate('/404')
         }
         setLoading(false);
       })
