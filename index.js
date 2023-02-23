@@ -1,35 +1,17 @@
-import React from 'react'
-import { Carousel } from 'react-responsive-carousel';
-import noImage from 'assets/no-image.png';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-export default function Index({ product }) {
-  return (
-    <div>
-      {product && (
-        <Carousel
-          showIndicators={false}
-          statusFormatter={(current, total) => `${current}/${total}`}
-          showArrows
-          showThumbs
-        >
-          {product.images?.map((image, index) => {
-            return (
-              <div key={index}>
-                <img 
-                  src={image} 
-                  alt={`${product.name} ${index}`}
-                  title={product?.name}
-                  loading="eager"
-                  onError={({ currentTarget }) => {
-                    currentTarget.onerror = null;
-                    currentTarget.src = noImage;
-                  }}
-                />
-              </div>
-            );
-          })}
-        </Carousel>
-      )}
-    </div>
-  )
-}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
