@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 20px 25px rgb(40 47 60 / 5%), 0 3px 4px rgb(40 47 60 / 5%);
+  border-radius: 15px;
+  border: none;
+  transition: all .2s ease-in-out;
+  color: #02416b;
+}
+
+.card:hover {
+  box-shadow: 0 30px 35px rgb(40 47 60 / 5%), 0 3px 4px rgb(40 47 60 / 5%);
+  transform: scale(1.03);
+  transition: all .2s ease-in-out;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #02416b;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.not-found h1 {
+  font-size: 70px;
+  line-height: 45px;
+  font-weight: bolder;
+  color: #02416b;
+}
+
+.not-found span {
+  font-size: 40px;
+}
+
+.not-found-link {
+  background: #02416b;
+  border-radius: 50px;
+  color: white;
+  padding: 10px  30px;
+  margin-top: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.not-found-link:hover {
+  background: #02416b;
+  color: white;
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  opacity: 0.96;
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+}
+
+.cart-container {
+  background-color: #fff;
+  box-shadow: 0 20px 25px rgb(40 47 60 / 5%), 0 3px 4px rgb(40 47 60 / 5%);
+  border-radius: 15px;
+  padding: 20px;
+  border: none;
+  min-height: 700px;
+}
+
+.carousel .thumb {
+  border-radius: 8px;
+  box-shadow: 0 20px 25px rgb(40 47 60 / 5%), 0 3px 4px rgb(40 47 60 / 5%);
+}
+
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  border: 2px solid #02416b;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px rgb(40 47 60 / 5%), 0 3px 4px rgb(40 47 60 / 5%);
+}
+
+.carousel .carousel-status {
+  font-size: 12px;
+}
+
+.carousel.carousel-slider .control-arrow {
+  top: 50%;
+  height: max-content;
+}
+
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow:hover {
+  background-color: transparent;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 10px solid #02416b;
+}
+
+.carousel .control-next.control-arrow:before {
+  border-left: 10px solid #02416b;
+}
