@@ -9,7 +9,7 @@ export default function Index({ product }) {
         <Carousel
           showIndicators={false}
           statusFormatter={(current, total) => `${current}/${total}`}
-          showArrows={false}
+          showArrows
           showThumbs
         >
           {product.images?.map((image, index) => {
